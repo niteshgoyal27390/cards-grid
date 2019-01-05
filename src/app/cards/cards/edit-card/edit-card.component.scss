@@ -1,0 +1,15 @@
+.update-image {
+    display: flex;
+    flex-flow: row wrap;
+
+    &__original,
+    &__edit {
+        flex: 1 1 calc(50% - 20px);
+        padding: 10px;
+    }
+    input[type="file"] {
+        padding: 5px;
+        width: 100%;
+        border: solid 1px;
+    }
+}

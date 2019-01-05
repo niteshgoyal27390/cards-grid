@@ -1,0 +1,19 @@
+<div *ngIf="cards">
+  <h3 class="text-center">Frontend development task : Grid of cards</h3>
+  <div class="grid-row">
+    <div class="grid-row__item" *ngFor="let card of cards" (click)="openModal(card)" (mouseenter)="card.hovered = true" (mouseleave)="card.hovered = false">
+      <span class="ic ic-edit ic-lg center-align"></span>
+      <span class="ic ic-close ic-lg top-right-align" *ngIf="card.hovered"></span>
+      <div class="img">
+        <img [src]="card.image_url" alt="{{card.name}}" class="img-responsive">
+      </div>
+    </div>
+    {{card}}
+  </div>
+  <div class="grid-row__no-cards" *ngIf="cards.length === 0">
+    There are no cards available at the moment.
+  </div>
+</div>
+<div *ngIf="!cards">
+  <p>There are some problems fetching cards from server. Please try again later!</p>
+</div>

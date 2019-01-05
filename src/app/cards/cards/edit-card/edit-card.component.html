@@ -1,0 +1,24 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{title}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="update-image">
+    <div class="update-image__original">
+      <h4>Original Image</h4>
+      <img [src]="card.image_url" alt="{{card.name}}" class="img-responsive">
+    </div>
+    <div class="update-image__edit">
+      <h4>New Image</h4>
+      <div class="img">
+        <img [src]="url">
+      </div>
+      <input type="file" name="uploadImage" id="upload-file" (change)="readUrl($event)">
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" (click)="bsModalRef.hide()">Confirm Image</button>
+</div>

@@ -1,0 +1,43 @@
+$spacer: 16px;
+
+.ic {
+    &::before {
+        display: inline-block;
+        content: '';
+        width: $spacer;
+        height: $spacer;
+        vertical-align: middle;
+    }
+    &-xs::before {
+        width: $spacer * 0.5;
+        height: $spacer * 0.5;
+    }
+    &-sm::before {
+        width: $spacer * 1;
+        height: $spacer * 1;
+    }
+    &-md::before {
+        width: $spacer * 1.5;
+        height: $spacer * 1.5;
+    }
+    &-lg::before {
+        width: $spacer * 2;
+        height: $spacer * 2;
+    }
+    &-xl::before {
+        width: $spacer * 3.5;
+        height: $spacer * 3.5;
+    }
+    &-xxl::before {
+        width: $spacer * 4.5;
+        height: $spacer * 4.5;
+    }
+    &-close::before {
+        background: url('/assets/svg/ic-close-tag.svg') center center no-repeat;
+        background-size: cover;
+    }
+    &-edit::before {
+        background: url('/assets/svg/ic-edit-icon.svg') center center no-repeat;
+        background-size: cover;
+    }
+}
