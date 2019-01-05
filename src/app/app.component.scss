@@ -1,4 +1,22 @@
+@import '../styles/settings/colors';
+
 .container {
     max-width: 1335px;
     margin: 0 auto;
+}
+
+.footer {
+    font-size: 16px;
+    background: #1a222c;
+    padding: 10px 0;
+    margin-top: 100px;
+    text-align: center;
+    color: $white;
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    a {
+        color: $redish;
+    }
 }
