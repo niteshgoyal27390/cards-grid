@@ -2,9 +2,9 @@
   <h3 class="text-center">Frontend development task : Grid of cards</h3>
   <div class="grid-row">
     <div class="grid-row__item" *ngFor="let card of cards" (click)="openModal(card)" (mouseenter)="card.hovered = true" (mouseleave)="card.hovered = false">
-      <span class="ic ic-edit ic-lg center-align"></span>
+      <span class="ic ic-edit ic-lg center-align" *ngIf="card.hovered"></span>
       <span class="ic ic-close ic-lg top-right-align" *ngIf="card.hovered"></span>
-      <div class="img">
+      <div class="card-img">
         <img [src]="card.image_url" alt="{{card.name}}" class="img-responsive">
       </div>
     </div>

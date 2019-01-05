@@ -8,7 +8,9 @@
   <div class="update-image">
     <div class="update-image__original">
       <h4>Original Image</h4>
-      <img [src]="card.image_url" alt="{{card.name}}" class="img-responsive">
+      <div class="img">
+        <img [src]="card.image_url" alt="{{card.name}}" class="img-responsive">
+      </div>
     </div>
     <div class="update-image__edit">
       <h4>New Image</h4>
